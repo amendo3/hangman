@@ -1,6 +1,9 @@
 import discord
 import random
 import asyncio
+import my_token
+
+token_to_use = my_token.mytoken
 
 word_list = []
 game_running = False
@@ -9,7 +12,7 @@ game_running = False
 class MyClient(discord.Client):
     async def on_ready(self):
         print(f'Logged in as {self.user} (ID: {self.user.id})')
-        print('------')
+        
         print(game_running)
 
     async def on_message(self, message):
@@ -57,4 +60,4 @@ intents = discord.Intents.default()
 intents.message_content = True
 
 client = MyClient(intents=intents)
-client.run('MTA5Mzk4OTMwMjQ5ODc3NTA3MA.GXXmu0.QpJoc_-B9cOkcte6w4quyDYQeaSZtTI_nF463A')
+client.run(token_to_use)
