@@ -46,8 +46,10 @@ class MyClient(discord.Client):
             word = random.choice(word_list)
             print(word)
 
+            await message.channel.send('Starting hangman game. Word is ' + str(len(word)) + ' characters long.')
+            
             while game_running:
-                await message.channel.send('Starting hangman game. Word is ' + str(len(word)) + ' characters long.')
+                
                 guesses = 6
 
             # alreadyGuessed = []

@@ -56,4 +56,4 @@ async def on_message(message):
                     await message.channel.send(f"You lost! The word was {word}.")
 
 print('Starting bot....')
-client.run('MTA5Mzk4OTMwMjQ5ODc3NTA3MA.GXXmu0.QpJoc_-B9cOkcte6w4quyDYQeaSZtTI_nF463A')
+client.run('token removed')
